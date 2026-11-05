@@ -71,4 +71,20 @@ Look at the attacker’s packets in the Info column. One port number is the same
 
 <img width="692" height="263" alt="image" src="https://github.com/user-attachments/assets/0c422276-e4f9-4351-a6f1-48f3817af96d" />
 
+---
+## Phase 7:
+How many different ports did the attacker try on the target? so we have the best way to find that first look for the open ports then close port then the sum of this boht contain the total port attacker try on a target.
+
+Filter for open ports: `ip.src == 192.168.10.20 and tcp.flags.syn == 1 and tcp.flags.ack == 1`
+
+Filter for close ports: `ip.src == 192.168.10.20 and tcp.flags.reset == 1 and tcp.flags.ack == 1`
+
+`Open port = 3`
+
+`Close port = 37`
+
+`Total = 40` 
+
+---
+
 
